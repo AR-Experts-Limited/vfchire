@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <link rel="stylesheet" href="style.css">
+  <title>VFC Hire</title>
+</head>
+<body>
+
+  <!-- Header/Navigation -->
+  <header>
+    <div class="container">
+      <nav>
+        <a href="#" class="logo">
+          VFC Hire
+        </a>
+        <ul class="nav-links">
+          <li><a href="#">About</a></li>
+          <li><a href="#vehicle">Vehicles</a></li>
+          <li><a href="#service">Services</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <!-- Slideshow Background -->
+    <div class="slideshow">
+      <div class="slide-container">
+        <img src="assets/hero1.png" alt="Slide 1" width="1920" height="1280" class="slide active">
+        <img src="assets/hero2.png" alt="Slide 2" width="1920" height="1280" class="slide">
+        <img src="assets/hero3.jpg" alt="Slide 3" width="1920" height="1280" class="slide">
+      </div>
+    </div>
+  
+    <!-- Content on top of slideshow -->
+    <div class="container hero-overlay">
+      <div class="hero-left">
+        <h1>Drive with Confidence.<br> Reliable Vans for Every Journey.</h1>
+<p>Looking for a van rental that suits your needs? Whether it’s for business deliveries, moving house, or weekend adventures, VFC Hire provides well-maintained, high-quality vehicles at competitive rates.</p>
+
+<p>With a fleet of modern, fuel-efficient vans, we ensure you get the right vehicle for the job. Our flexible rental options allow you to hire a van for a few hours, a day, or even long-term, with hassle-free booking and no hidden charges.</p>
+
+      </div>
+
+      <div class="hero-right">
+        <div class="contact-form">
+            <h3>Enquire Now</h3>
+            <p>Find the perfect van for your business today.</p>
+    
+            <form id="contactForm">
+              <!-- Nature of Enquiry Selection -->
+              <label for="enquiry-type">Nature of Enquiry <span>*</span></label>
+              <div class="form-group selection-group">
+                  <button type="button" class="select-btn" data-value="Personal Hire">Personal Hire</button>
+                  <button type="button" class="select-btn" data-value="Business Hire">Business Hire</button>
+                  <input type="hidden" id="enquiry-type" name="enquiry_type" required>
+              </div>
+          
+              <!-- Company Name (Initially Hidden) -->
+              <div class="form-group" id="company-field" style="display: none;">
+                  <label for="company-name">Company Name <span>*</span></label>
+                  <input type="text" id="company-name" name="company_name" placeholder="Enter company name">
+              </div>
+          
+              <!-- First Name & Last Name (Same Line) -->
+              <div class="form-row">
+                  <div class="form-group">
+                      <label for="first-name">First Name <span>*</span></label>
+                      <input type="text" id="first-name" name="first_name" placeholder="Enter first name" required>
+                  </div>
+                  <div class="form-group">
+                      <label for="last-name">Last Name <span>*</span></label>
+                      <input type="text" id="last-name" name="last_name" placeholder="Enter last name" required>
+                  </div>
+              </div>
+          
+              <!-- Phone Number -->
+              <div class="form-group">
+                  <label for="phone">Phone Number <span>*</span></label>
+                  <input type="tel" id="phone" name="phone_number" placeholder="Enter phone number" required>
+              </div>
+          
+              <!-- Email -->
+              <div class="form-group">
+                  <label for="email">Email <span>*</span></label>
+                  <input type="email" id="email" name="user_email" placeholder="Enter your email" required>
+              </div>
+          
+              <!-- Message (Not Mandatory) -->
+              <div class="form-group">
+                  <label for="message">Message (Optional)</label>
+                  <textarea id="message" name="message" placeholder="Your Message" rows="3"></textarea>
+              </div>
+          
+              <!-- Submit Button -->
+              <button type="submit" class="submit-btn">Submit</button>
+              <div id="form-status"></div>
+          </form>
+          
+        </div>
+    </div>
+    
+
+    </div>
+  </section>
+  
+
+
+  <!-- Vehicle Section -->
+  <section id="vehicle" class="carmaker-logos">
+    <div class="container">
+      <h2>Trusted by Leading Manufacturers</h2>
+      <p>We partner with top car brands to ensure our fleet is stocked with the best and most reliable vans. Our vehicles are sourced from world-renowned manufacturers, ensuring durability, safety, and efficiency on the road.</p>
+        <div class="logo-grid">
+            <img src="assets/logo/ford.png" alt="Ford">
+            <img src="assets/logo/vw.png" alt="VW">
+            <img src="assets/logo/Toyota.png" alt="Toyota">
+            <img src="assets/logo/Renault.png" alt="Renault">
+            <img src="assets/logo/Peugeot.png" alt="Peugeot">
+            <img src="assets/logo/Vauxhall.png" alt="Vauxhall">
+            <img src="assets/logo/citroen.png" alt="Citroen">
+        </div>
+    </div>
+</section>
+
+<!-- Cards Section -->
+<section  class="cards-section">
+  <div class="container">
+    <h2>Flexible Van Rentals for Every Need</h2>
+    <p>At VFC Hire, we offer a wide range of self-drive van hire options to suit your needs. Whether you're moving home, transporting goods, or need a van for business deliveries, we’ve got the right vehicle for you.</p>
+      <div class="cards-wrapper">
+          <!-- Card 1: SWB -->
+          <div class="card">
+              <img class="img" src="assets/swb.png" alt="Personal Hire Van">
+              <div class="textBox">
+                  <p class="text head">SWB VAN</p>
+                  <span>Ford Transit Custom SWB or similar</span>
+                  <div class="features">
+                      <!-- User Icon -->
+                      <div class="feature-item">
+                          <i class="fas fa-user"></i>
+                          <span>3</span>
+                      </div>
+                      <!-- Door Icon -->
+                      <div class="feature-item">
+                          <i class="fas fa-door-closed"></i>
+                          <span>3</span>
+                      </div>
+                  </div>
+              </div>
+          </div>
+
+          <!-- Card 2: LWB -->
+          <div class="card">
+              <img class="img" src="assets/xl.png" alt="Personal Hire Van">
+              <div class="textBox">
+                  <p class="text head">LWB Van</p>
+                  <span>Ford Transit XL or similar</span>
+                  <div class="features">
+                      <!-- User Icon -->
+                      <div class="feature-item">
+                          <i class="fas fa-user"></i>
+                          <span>3</span>
+                      </div>
+                      <!-- Door Icon -->
+                      <div class="feature-item">
+                          <i class="fas fa-door-closed"></i>
+                          <span>3</span>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+
+
+
+
+  <!-- Features Grid -->
+  <section id="service" class="features-grid">
+    <div class="container">
+      <h2>We are known for...</h2>
+      <p class="known-for-intro">
+        At VFC Hire, we go beyond just renting out vans—we deliver a seamless experience that prioritizes your convenience, safety, and satisfaction. Here’s why customers trust us:
+     </p>
+      <div class="features-cards">
+        <div class="feature-big-card">
+          <div class="icon-container">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--primary-color)">
+              <path d="M12 22l-4-4h8l-4 4z"></path>
+              <path d="M12 2v16"></path>
+            </svg>
+          </div>
+          <h3>Exceptional Customer Service</h3>
+          <p>Our team is dedicated to making your van rental experience smooth and hassle-free. Whether you need assistance with booking, vehicle selection, or roadside support, we are here to help every step of the way.</p>
+        </div>
+        <div class="feature-big-card">
+          <div class="icon-container">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--primary-color)">
+              <circle cx="12" cy="12" r="10"></circle>
+              <path d="M12 16v-4"></path>
+              <path d="M12 8h.01"></path>
+            </svg>
+          </div>
+          <h3>Safe & Secure Payment Options</h3>
+          <p>We provide multiple secure payment options, ensuring that your transactions are protected. Choose from credit/debit cards, online banking, or contactless payments for a seamless experience.</p>
+        </div>
+        <div class="feature-big-card">
+          <div class="icon-container">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--primary-color)">
+              <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"></path>
+              <polyline points="7 10 12 15 17 10"></polyline>
+              <line x1="12" y1="15" x2="12" y2="3"></line>
+            </svg>
+          </div>
+          <h3>Modern & Well-Maintained Fleet</h3>
+          <p>Renting a van has never been easier. Use our simple online booking system to check availability, select your vehicle, and receive instant confirmation. Need assistance? Contact our team, and we’ll handle the rest.</p>
+        </div>
+        <div class="feature-big-card">
+          <div class="icon-container">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--primary-color)">
+              <path d="M18 8h1a4 4 0 010 8h-1"></path>
+              <path d="M2 8h16v9a4 4 0 01-4 4H6a4 4 0 01-4-4V8z"></path>
+              <line x1="6" y1="1" x2="6" y2="4"></line>
+              <line x1="10" y1="1" x2="10" y2="4"></line>
+              <line x1="14" y1="1" x2="14" y2="4"></line>
+            </svg>
+          </div>
+          <h3>Easy Booking & Instant Confirmation</h3>
+          <p>Renting a van has never been easier. Use our simple online booking system to check availability, select your vehicle, and receive instant confirmation. Need assistance? Contact our team, and we’ll handle the rest.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- CTA Section -->
+<section id="contact" class="container cta-section">
+  <div class="cta-left">
+      <h2>Our Office Location</h2>
+      <p>Visit us at our office in Manchester.</p>
+
+      <div class="address-box">
+          <h4>Address</h4>
+          <p>Centenary House,<br> 1 Centenary Way,<br> Salford, M50 1RF,<br> United Kingdom</p>
+          <h4>Contact</h4>
+          <p>Email: admin@vfchire.com</p>
+      </div>
+  </div>
+
+  <div class="cta-right">
+      <div id="map"></div> <!-- OpenStreetMap container -->
+  </div>
+</section>
+
+
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-logo">
+          
+        </div>
+        <div class="footer-links">
+          <div class="footer-column">
+
+          </div>
+          <div class="footer-column">
+          
+            
+          </div>
+          <div class="footer-column">
+           
+          
+          </div>
+          <div class="footer-column">
+           
+         
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>Copyright ©2025 Allrights reserved</div>
+          
+        </div>
+      </div>
+    </div>
+  </footer>
+
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<script>
+  (function() {
+    emailjs.init("your_public_key");
+  })();
+</script>
+<script>
+    window.addEventListener('scroll', function() {
+      const header = document.querySelector('header');
+      if (window.scrollY > 50) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    });
+</script>
+<script>
+    // Initialize the map
+    var map = L.map('map').setView([53.4808, -2.2426], 13); // Manchester coordinates
+
+    // Load and display OpenStreetMap tiles
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map);
+
+    // Add a marker for Manchester
+    L.marker([53.48185133493915, -2.3265957211128914]).addTo(map)
+        .bindPopup('<b>VFC Hire Office</b><br>Manchester, UK')
+        .openPopup();
+  </script>
+<script src="script.js"></script>
+</body>
+</html>
