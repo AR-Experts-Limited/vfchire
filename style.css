@@ -705,3 +705,213 @@
   .social-icons a {
     color: var(--light-text);
   }
+  .mobile-menu-icon {
+    display: none;
+
+  }
+  /* Mobile Responsiveness */
+/* Base responsive styles to be added to the existing CSS */
+
+/* General responsiveness */
+@media screen and (max-width: 1200px) {
+  .container {
+    padding: 0 15px;
+  }
+}
+
+/* Tablet and smaller screens */
+@media screen and (max-width: 992px) {
+  /* Header/Navigation */
+  .nav-links {
+    display: none;
+  }
+  
+  /* Add hamburger menu for mobile */
+  .mobile-menu-icon {
+    display: block;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  
+  /* Hero section */
+  .hero-overlay {
+    flex-direction: column;
+    padding: 1rem;
+    margin-bottom: 2em;
+  }
+  
+  .hero-left, .hero-right {
+    max-width: 100%;
+    margin: 1em 0;
+  }
+  
+  .hero-left {
+    margin-left: 0;
+    margin-right: 0;
+    text-align: center;
+  }
+  
+  .hero-right {
+    margin-right: 0;
+    margin-left: 0;
+    width: 90%;
+  }
+  
+  /* Cards section */
+  .cards-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .card {
+    width: 90%;
+    margin: 10px 0;
+  }
+  
+  /* Features grid */
+  .features-cards {
+    grid-template-columns: 1fr;
+  }
+  
+  /* CTA section */
+  .cta-section {
+    flex-direction: column;
+  }
+  
+  #map {
+    height: 250px;
+  }
+}
+
+/* Mobile phones */
+@media screen and (max-width: 768px) {
+  /* Adjust body padding to compensate for fixed header */
+  body {
+    padding-top: 60px;
+  }
+  
+  /* Smaller heading text */
+  .hero-left h1 {
+    font-size: 1.8rem;
+  }
+  
+  /* Form elements */
+  .form-row {
+    flex-direction: column;
+    gap: 5px;
+  }
+  
+  /* Logo grid */
+  .logo-grid img {
+    width: 120px;
+  }
+  
+  /* Cards */
+  .card {
+    height: 250px;
+  }
+  
+  .textBox > .head {
+    font-size: 30px;
+  }
+  
+  .textBox > span {
+    font-size: 18px;
+  }
+  
+  /* Footer */
+  .footer-top {
+    flex-direction: column;
+  }
+  
+  .footer-logo, .footer-links {
+    width: 100%;
+  }
+  
+  .footer-links {
+    margin-top: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .footer-column {
+    width: 50%;
+    margin-bottom: 20px;
+  }
+}
+
+/* Small mobile phones */
+@media screen and (max-width: 480px) {
+  /* Logo grid */
+  .logo-grid img {
+    width: 100px;
+  }
+  
+  /* Card elements */
+  .card {
+    height: 200px;
+  }
+  
+  .textBox {
+    padding: 10px;
+  }
+  
+  .textBox > .head {
+    font-size: 24px;
+  }
+  
+  .textBox > span {
+    font-size: 16px;
+  }
+  
+  /* Address box */
+  .address-box {
+    padding: 10px;
+  }
+  
+  /* Footer columns */
+  .footer-column {
+    width: 100%;
+  }
+}
+
+/* Additional styles for the mobile menu */
+.mobile-menu {
+  display: none;
+  position: fixed;
+  top: 80px;
+  left: 0;
+  width: 100%;
+  background: white;
+  padding: 20px;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+  z-index: 999;
+}
+
+.mobile-menu.active {
+  display: block;
+}
+
+.mobile-menu ul {
+  list-style: none;
+}
+
+.mobile-menu li {
+  margin: 15px 0;
+}
+
+.mobile-menu a {
+  text-decoration: none;
+  color: var(--text-color);
+  font-size: 18px;
+  display: block;
+  padding: 10px 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+/* Fix for logo display on mobile */
+.logo-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}

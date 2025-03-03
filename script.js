@@ -1,4 +1,29 @@
 document.addEventListener("DOMContentLoaded", function () {
+    const mobileMenuIcon = document.querySelector('.mobile-menu-icon');
+  const mobileMenu = document.querySelector('.mobile-menu');
+  
+  if (mobileMenuIcon && mobileMenu) {
+    mobileMenuIcon.addEventListener('click', function() {
+      mobileMenu.classList.toggle('active');
+    });
+    
+    // Close mobile menu when clicking on a link
+    const mobileLinks = document.querySelectorAll('.mobile-menu a');
+    mobileLinks.forEach(link => {
+      link.addEventListener('click', function() {
+        mobileMenu.classList.remove('active');
+      });
+    });
+  }
+  
+  // Close mobile menu when clicking outside
+  document.addEventListener('click', function(event) {
+    if (!event.target.closest('.mobile-menu') && 
+        !event.target.closest('.mobile-menu-icon') && 
+        mobileMenu.classList.contains('active')) {
+      mobileMenu.classList.remove('active');
+    }
+  });
   // Hero Image Slideshow
   const slides = document.querySelectorAll(".slide");
   let currentSlide = 0;
