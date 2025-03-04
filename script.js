@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", function () {
   setInterval(nextSlide, 5000);
 
   // Initialize EmailJS with your User ID
-  emailjs.init("TiArJ6t250CaHGYFf");
+  emailjs.init("cqABHeRy0jcFIXukZ");
 
   // Contact Form Handling (EmailJS Integration)
   document.getElementById("contactForm").addEventListener("submit", function(event) {
@@ -58,7 +58,7 @@ document.addEventListener("DOMContentLoaded", function () {
       submitButton.textContent = 'Sending...';
       submitButton.disabled = true;
 
-      emailjs.send("service_43dhioj", "template_huobhgg", {
+      emailjs.send("service_90s5vyh", "template_nd4utq9", {
           from_name: document.getElementById("first-name").value + " " + document.getElementById("last-name").value,
           enquiry_type: document.getElementById("enquiry-type").value,
           first_name: document.getElementById("first-name").value,
