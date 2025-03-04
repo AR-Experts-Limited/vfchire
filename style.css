@@ -315,9 +315,11 @@
 
 /* Logos in Column Layout */
 .logo-grid {
-  flex-direction: column;
-  align-items: center;
-  gap: 40px;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  gap: 20px;
+  flex-direction: row;
 }
 
 .logo-grid img {
