@@ -315,10 +315,8 @@
 
 /* Logos in Column Layout */
 .logo-grid {
-  display: flex;
-  flex-wrap: nowrap;
   justify-content: center;
-  gap: 20px;
+  gap: 10px;
   flex-direction: row;
 }
 
@@ -874,6 +872,13 @@
   .footer-column {
     width: 100%;
   }
+  /* Fix for logo display on mobile */
+  .logo-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
 }
 
 /* Additional styles for the mobile menu */
@@ -910,10 +915,3 @@
   border-bottom: 1px solid #f0f0f0;
 }
 
-/* Fix for logo display on mobile */
-.logo-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-}
