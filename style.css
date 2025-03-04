@@ -641,12 +641,7 @@
     background-color: white;
     padding: 60px 0 30px;
   }
-  
-  .footer-top {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 40px;
-  }
+
   
   .footer-logo {
     width: 25%;
@@ -662,11 +657,6 @@
     font-size: 14px;
   }
   
-  .footer-links {
-    display: flex;
-    width: 70%;
-    justify-content: space-between;
-  }
   
   .footer-column h4 {
     font-size: 16px;
@@ -714,9 +704,7 @@
 
 /* General responsiveness */
 @media screen and (max-width: 1200px) {
-  .container {
-    padding: 0 15px;
-  }
+ 
 }
 
 /* Tablet and smaller screens */
@@ -775,12 +763,17 @@
   
   /* CTA section */
   .cta-section {
-    flex-direction: column;
+    display: grid;
+    justify-content: center;
   }
   
   #map {
     height: 250px;
   }
+  footer {
+    background-color: white;
+    padding: 0px 0 30px;
+}
 }
 
 /* Mobile phones */
@@ -818,21 +811,7 @@
   .textBox > span {
     font-size: 18px;
   }
-  
-  /* Footer */
-  .footer-top {
-    flex-direction: column;
-  }
-  
-  .footer-logo, .footer-links {
-    width: 100%;
-  }
-  
-  .footer-links {
-    margin-top: 20px;
-    flex-wrap: wrap;
-  }
-  
+    
   .footer-column {
     width: 50%;
     margin-bottom: 20px;
@@ -867,17 +846,17 @@
   .address-box {
     padding: 10px;
   }
-  
-  /* Footer columns */
-  .footer-column {
-    width: 100%;
-  }
+
   /* Fix for logo display on mobile */
   .logo-grid {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
+}
+footer {
+  background-color: white;
+  padding: 0px 0 30px;
 }
 }
 
